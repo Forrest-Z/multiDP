@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/skloe/Documents/毕业要紧/ASV-master20200410/ASV-master/common/math/miscellaneous/include/Vec2d.h
+cmath
+-
+
+/home/skloe/Documents/毕业要紧/ASV-master20200410/ASV-master/common/math/miscellaneous/test/Vec2d_test.cc
+../include/Vec2d.h
+/home/skloe/Documents/毕业要紧/ASV-master20200410/ASV-master/common/math/miscellaneous/include/Vec2d.h
+boost/test/included/unit_test.hpp
+-
+iostream
+-
+

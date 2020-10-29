@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/skloe/Documents/毕业要紧/ASV-master20200410/ASV-master/common/fileIO/include/csvstream.h
+cassert
+-
+exception
+-
+fstream
+-
+iostream
+-
+map
+-
+regex
+-
+sstream
+-
+string
+-
+vector
+-
+
+/home/skloe/Documents/毕业要紧/ASV-master20200410/ASV-master/common/fileIO/test/testcsv.cc
+map
+-
+../include/csvstream.h
+/home/skloe/Documents/毕业要紧/ASV-master20200410/ASV-master/common/fileIO/include/csvstream.h
+

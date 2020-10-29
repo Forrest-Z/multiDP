@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -Wextra -g -ggdb   CMakeFiles/testeigenmvnd.dir/testeigenmvnd.cc.o  -o testeigenmvnd -lboost_system -lboost_filesystem -lboost_iostreams -lutil 

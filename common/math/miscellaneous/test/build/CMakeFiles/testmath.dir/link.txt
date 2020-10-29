@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -Wextra -g -ggdb   CMakeFiles/testmath.dir/testmathutils.cc.o  -o testmath /usr/lib/libboost_unit_test_framework.so.1.71.0 

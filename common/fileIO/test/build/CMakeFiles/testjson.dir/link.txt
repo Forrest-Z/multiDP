@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -Wextra -g -ggdb -pedantic   CMakeFiles/testjson.dir/testjson.cc.o  -o testjson /usr/lib/libboost_unit_test_framework.so.1.71.0 

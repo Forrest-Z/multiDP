@@ -1,0 +1,215 @@
+{
+  "vesselname": "Biling",
+  "project_directory":"/home/scar1et/Coding/ASV/",
+  "dbpath": "data/",
+  "dbconfig":"common/fileIO/recorder/config/dbconfig.json",
+  "property": {
+    "L":3,
+    "B":2,
+    "mini_turn_radius":1,
+    "Mass": [540, 0, 0, 0, 540, 200, 0, 200, 1000],
+    "AddedMass": [83, 0, 0, 0, 166, 244, 0, 244, 298],
+    "LinearDamping": [17, 0, 0, 0, 20, 0, 0, 0, 100],
+    "QuadraticDamping": [20, 0, 0, 0, 0, 0, 0, 0, 0],
+    "CoG": [1.6, 0, 0],
+    "velocity_limit": {
+      "surge": [-4, 3],
+      "sway": [-0.5, 0.5],
+      "yaw": [-1, 2],
+      "roll": [-1.5, 1]
+    }
+  },
+  "controller": {
+    "sample_time": 0.1,
+     "LOS": {
+      "los_radius_co": 1,
+      "capture_radius_co":0.7
+    },
+    "surge": {
+      "position_P": 10,
+      "position_I": 2,
+      "velocity_P": 1,
+      "velocity_I": 1,
+      "position_allowed_error": 1,
+      "velocity_allowed_error": 1,
+      "min_output": -5,
+      "max_output": 6
+    },
+    "sway": {
+      "position_P": 10,
+      "position_I": 2,
+      "velocity_P": 1,
+      "velocity_I": 1,
+      "position_allowed_error": 0.1,
+      "velocity_allowed_error": 1,
+      "min_output": -1,
+      "max_output": 1
+    },
+    "yaw": {
+      "position_P": 10,
+      "position_I": 2,
+      "velocity_P": 1,
+      "velocity_I": 1,
+      "position_allowed_error": 0.1,
+      "velocity_allowed_error": 1,
+      "min_output": -4,
+      "max_output": 5
+    }
+  },
+  "thrustallocation":{
+    "penality":{
+      "surge": 40,
+      "sway":  400,
+      "yaw": 4000
+    }
+  },
+  "thruster1": {
+    "type": "tunnel",
+    "position": [3.6, 0],
+    "thrust_constant": [3E-4, 1E-4],
+    "max_delta_rotation": 100,
+    "max_rotation": 1500
+  },
+  "thruster2": {
+    "type": "azimuth",
+    "position": [2.23, -0.83],
+    "thrust_constant": 2.8E-6,
+    "max_delta_rotation": 100,
+    "max_rotation": 1500,
+    "min_rotation": 5,
+    "max_delta_alpha": 7,
+    "max_alpha": 190,
+    "min_alpha": -10
+  },
+  "thruster3": {
+    "type": "azimuth",
+    "position": [2.23, 0.83],
+    "thrust_constant": 2.8E-6,
+    "max_delta_rotation": 100,
+    "max_rotation": 1500,
+    "min_rotation": 5,
+    "max_delta_alpha": 7,
+    "max_alpha": 10,
+    "min_alpha": -190
+  },
+  "thruster4": {
+    "type": "azimuth",
+    "position": [0.96, -0.83],
+    "thrust_constant": 2.8E-5,
+    "max_delta_rotation": 100,
+    "max_rotation": 1200,
+    "min_rotation": 5,
+    "max_delta_alpha": 20,
+    "max_alpha": 190,
+    "min_alpha": -10
+  },
+  "thruster5": {
+    "type": "rudder",
+    "position": [-0.12, 0],
+    "thrust_constant": 2.8E-6,
+    "rudder_constant": 11,
+    "max_delta_rotation": 200,
+    "max_rotation": 200,
+    "min_rotation": 1,
+    "max_delta_varphi": 7,
+    "max_varphi": 30,
+    "min_varphi": -30
+  },
+  "thruster6": {
+    "type": "twinfixed",
+    "position": [-1.9, -0.7],
+    "thrust_constant": [0.0083, 0.0036],
+    "max_delta_rotation": 500,
+    "p2n_delay_time": 1.5,
+    "max_rotation": 220
+  },
+  "estimator": {
+    "sample_time": 0.2,
+    "Kalman":{
+      "Q":[5e-1,0,0,0,0,0, 0,5e-2,0,0,0,0, 0,0,1e-3,0,0,0, 0,0,0,1e-3,0,0, 0,0,0,0,1e-3,0, 0,0,0,0,0,1e-7],
+      "R":[2.8e-2,0,0,0,0,0, 0,3.5e-3,0,0,0,0, 0,0,1e-4,0,0,0, 0,0,0,9e-4,0,0, 0,0,0,0,4e-4,0, 0,0,0,0,0,4.8e-8]
+    }
+  },
+  "planner": {
+    "sample_time": 0.1,
+    "FrenetLattice":{
+      "target_course_arc_step":0.05,
+      "max_road_width":7,
+      "road_width_step":1,
+      "max_planning_horizon":5,  
+      "min_planning_horizon":4,
+      "planning_horizon_step":0.2,
+      "max_speed_deviation":1.2,
+      "target_speed_step":0.3
+    },
+    "FrenetCollision":{
+      "robot_radius":2.5
+    }
+  },
+  "perception":{
+    "sample_time": 0.1,
+    "alarm_zone":{
+      "start_range_m": 10,
+      "end_range_m": 20,
+      "center_bearing_deg": 0,
+      "width_bearing_deg": 90,
+      "sensitivity_threhold": 200
+    },
+    "TargetTracking":{
+      "min_radius": 1,
+      "max_radius": 3,
+      "speed_threhold": 1,
+      "max_speed": 20,
+      "max_acceleration": 5,
+      "max_roti": 600,
+      "safe_distance": 1,
+      "loss_K_radius": 0.8,
+      "loss_K_deltaspeed": 1,
+      "loss_K_deltayaw": 1
+    },
+    "Clustering":{
+      "radius": 1,
+      "p_minumum_neighbors":3
+    }
+  },
+  "simulator": {
+    "sample_time": 0.1
+  },
+  "sensors":{
+    "GPS":{
+      "number": 1,
+      "primary_antenna":[0.1, 0, 0]
+    },
+    "Wind":{
+      "number": 2,
+      "location1":[1, 1, 2],
+      "location2":[1, 1, 2]
+    },
+    "marine_radar":{
+      "number": 1,
+      "antenna":[-1, 1.222223]
+    }
+  },
+  "comcenter":{
+    "GPS":{
+      "port":"/dev/ttyUSB0",
+      "baudrate":115200
+    },
+    "GUI_server":{
+      "port":"/dev/ttyUSB1",
+      "baudrate":19200
+    },
+    "remotecontrol":{
+      "port":"/dev/ttyUSB2",
+      "baudrate":115200
+    },
+    "Wind":{
+      "port":"/dev/ttyUSB3",
+      "baudrate":9600
+    },
+    "stm32":{
+      "port":"/dev/ttyUSB4",
+      "baudrate":115200
+    }
+  }
+}
