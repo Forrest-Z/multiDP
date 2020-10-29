@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/skloe/Documents/毕业要紧/ASV-master20200410/ASV-master/modules/controller/test/qo1.cc
+stdio.h
+-
+vector
+-
+mosek.h
+/home/skloe/Documents/毕业要紧/ASV-master20200410/ASV-master/modules/controller/test/mosek.h
+
+/opt/mosek/9.0/tools/platform/linux64x86/h/mosek.h
+stdlib.h
+-
+stdio.h
+-
+

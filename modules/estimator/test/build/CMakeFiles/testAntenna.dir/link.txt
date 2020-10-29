@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -Wextra -g -ggdb   CMakeFiles/testAntenna.dir/testAntennadeviation.cc.o CMakeFiles/testAntenna.dir/home/skloe/Documents/毕业要紧/ASV-master20200410/ASV-master/common/logging/src/easylogging++.cc.o  -o testAntenna -Wl,-rpath,/usr/local/lib /usr/local/lib/libserial.so /usr/local/lib/libGeographic.so.19.0.0 /usr/lib/x86_64-linux-gnu/libsqlite3.so 

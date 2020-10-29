@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -Wextra -g -ggdb   CMakeFiles/testestimator.dir/testestimator.cc.o  -o testestimator 

@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -Wextra -g -ggdb -pedantic   CMakeFiles/testsimulator2.dir/test2simulator.cc.o  -o testsimulator2  -lboost_system -lboost_filesystem -lboost_iostreams -lutil 

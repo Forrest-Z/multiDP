@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -Wextra -g -ggdb -pedantic   CMakeFiles/testmosek.dir/qo1.cc.o  -o testmosek /usr/lib/libmosek64.so 

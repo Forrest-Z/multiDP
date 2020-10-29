@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -Wextra -g -ggdb   CMakeFiles/testkalman.dir/testkalman.cc.o  -o testkalman -lboost_system -lboost_filesystem -lboost_iostreams -lutil 

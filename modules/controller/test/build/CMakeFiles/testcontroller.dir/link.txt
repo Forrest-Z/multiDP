@@ -1,0 +1,1 @@
+/usr/bin/c++   -O0 -Wall -Wextra -g -ggdb -pedantic   CMakeFiles/testcontroller.dir/testcontroller.cc.o CMakeFiles/testcontroller.dir/home/skloe/Documents/毕业要紧/ASV-master20200410/ASV-master/common/logging/src/easylogging++.cc.o  -o testcontroller /usr/lib/libmosek64.so -lpthread 
